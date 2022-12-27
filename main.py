@@ -18,7 +18,7 @@ file.close()
 
 file = open('files for serching/group_2.txt', mode='w', encoding='utf')
 file.writelines([
-                '1. Дьомшина Анастасія Миколаївна 335\n', 
+                '1. Гончаров Дьомшина Анастасія Миколаївна 335\n', 
                 '2. Войтенко Артем Анатолійович 278\n',
                 '3. Судніцин Дмитро Вікторович 273\n',
                 '4. Денисенко Ростислав Васильович 126243\n',
@@ -40,6 +40,7 @@ def serching(fileName, serchingText):
     with open(fileName, 'r+', encoding='utf') as file_1:
         elements = file_1.readlines()
         for i in range(len(elements)):
+            print(elements[i].split(' '), fileName)
             if value == 0:
                 return 0
             elif serchingText in elements[i].split(' '):
